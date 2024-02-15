@@ -85,11 +85,19 @@ spec:
             version: v1beta1
             group: storage.cnrm.cloud.google.com
           targetField: url
+        - tfField: clone
+          key: clone
+          description: |-
+            The context needed to create this instance as a clone of another instance.
+          targetField: self_link
+          gvk:
+            kind: SQLInstance
+            version: v1beta4
+            group: sql.cnrm.cloud.google.com
       ignoredFields:
         - settings.version
         - deletion_protection
         - restore_backup_context
-        - clone # b/179734967
       containers:
         - type: project
           tfField: project

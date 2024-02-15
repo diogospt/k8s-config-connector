@@ -276,6 +276,20 @@ spec:
                         type: object
                     type: object
                 type: object
+              clone:
+                description: The context needed to create this instance as a clone of another
+                  instance. The configuration is detailed below.
+                properties:
+                  sourceInstanceName:
+                    description: Name of the source instance which will be cloned.
+                    type: string
+                  pointInTime:
+                    description: The timestamp of the point in time that should be restored.
+                    type: string
+                  preferredZone:
+                    description: Point-in-time-recovery for PostgreSQL only. Clone to an instance
+                      in the specified zone. If no zone is specified, clone to the same zone as
+                      the source instance.
               settings:
                 description: The settings to use for the database. The configuration
                   is detailed below.
